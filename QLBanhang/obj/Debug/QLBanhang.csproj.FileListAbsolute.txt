@@ -1,0 +1,14 @@
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\bin\Debug\QLBanhang.exe.config
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\bin\Debug\QLBanhang.exe
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\bin\Debug\QLBanhang.pdb
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.Properties.Resources.resources
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.View.FormChiTiet.resources
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.View.FormHoaDon.resources
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.View.FormKhachHang.resources
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.View.FormNhanVien.resources
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.View.FormTimKiem.resources
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.csproj.GenerateResource.Cache
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.exe
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.pdb
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.csprojResolveAssemblyReference.cache
+D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.View.FormFind.resources
