@@ -14,7 +14,7 @@ namespace QLBanhang.View
 {
     public partial class FormNhanVien : Form
     {
-        NhanVienControl NvCtrl = new NhanVienControl();
+        NhanVienKhoControl NvCtrl = new NhanVienKhoControl();
         int TempID;
         Random ran = new Random();
         int iflag = 0, find, findsdt, findten, findId;
@@ -118,7 +118,7 @@ namespace QLBanhang.View
             Disp_Enable(true);
             dtDateBegin.Enabled = false;
             int ID = ran.Next(1000000, 9999999);
-            txtId.Text = "NV" + ID.ToString();
+            txtId.Text = "NVK" + ID.ToString();
             dtgvDanhsachNV.Enabled = false;
         }
 
@@ -225,6 +225,12 @@ namespace QLBanhang.View
             }
             else return;
         }
+
+        /// <summary>
+        /// don't input key a->z into this textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtSdt_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -327,7 +333,7 @@ namespace QLBanhang.View
             Disp_Enable(true);
             dtDateBegin.Enabled = false;
             int ID = ran.Next(1000000, 9999999);
-            txtId.Text = "NV" + ID.ToString();
+            txtId.Text = "NVK" + ID.ToString();
             dtgvDanhsachNV.Enabled = false;
         }
 
@@ -413,9 +419,9 @@ namespace QLBanhang.View
         {
             lbLoiNhac.Text = "";
             find = findsdt = 1;
-            findten = 0;
+            findten = findId = 0;
             Disp_Enable(false);
-            txtSdt.Enabled = lbLoiNhac.Visible = btnFind.Visible = true;
+            txtSdt.Enabled = lbLoiNhac.Visible = btnFind.Visible = true;//Showing btn 'Find' at this form
             btnLuu.Enabled = MNSLuu.Enabled = false;
             lbLoiNhac.Text = "Nhập số điện thoại khách hàng cần tìm vào ô 'Số điện thoại'!";
         }
@@ -423,7 +429,7 @@ namespace QLBanhang.View
         {
             lbLoiNhac.Text = "";
             find = findten = 1;
-            findsdt = 0;
+            findsdt = findId = 0;
             Disp_Enable(false);
             txtTen.Enabled = true; lbLoiNhac.Visible = btnFind.Visible = true;
             btnLuu.Enabled = MNSLuu.Enabled = false;
@@ -444,6 +450,7 @@ namespace QLBanhang.View
                 else
                 {
                     btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
                     dtgvDanhsachNV.DataSource = DT;
                     bingding();
                 }
@@ -459,6 +466,7 @@ namespace QLBanhang.View
                 else
                 {
                     btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
                     dtgvDanhsachNV.DataSource = DT;
                     bingding();
                 }
@@ -467,10 +475,16 @@ namespace QLBanhang.View
             //</==============================================>
         }
 
-        private void MNSTimId_Click(object sender, EventArgs e)
-        {
+        //private void MNSTimId_Click(object sender, EventArgs e)
+        //{
+        //    find = findId = 1;
+        //    findten = findsdt = 0;
+        //    Disp_Enable(false);
+        //    lbLoiNhac.Visible = btnFind.Visible = true;//Showing btn 'Find' at this form
+        //    btnLuu.Enabled = MNSLuu.Enabled = false;
+        //    lbLoiNhac.Text = "Nhập số điện thoại khách hàng cần tìm vào ô 'Số điện thoại'!";
 
-        }
+        //}
        
 
     }

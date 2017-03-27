@@ -8,16 +8,16 @@ using System.Data.SqlClient;
 using QLBanhang.Object;
 namespace QLBanhang.Model
 {
-    class NhanVienMod
+    class NhanVienKhoMod
     {
         ConnectToSQL sqlcon = new ConnectToSQL(); //Class ConnectToSQL.
         SqlCommand sqlcmd = new SqlCommand();
-
+        Random randompassword = new Random();
         public DataTable GetData()
         {
             DataTable dt = new DataTable();
             
-            sqlcmd.CommandText = "select MaNV, TenNV, GioiTinh, NamSinh, DiaChi, Email, SDT, NgayVaoLamViec from tb_NhanVien";
+            sqlcmd.CommandText = "select MaNV, TenNV, GioiTinh, NamSinh, DiaChi, Email, SDT, NgayVaoLamViec from tb_NhanVienKho";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection; //"sqlcmd.Connection = sqlcon" if there is not constructor Connection of class ConnectToSQL.
             try
@@ -39,7 +39,7 @@ namespace QLBanhang.Model
         //Add new data into the database:
         public bool AddData(NhanvienObj NvObj)
         {
-            sqlcmd.CommandText = "Insert into tb_NhanVien values('" + NvObj.MaNhanVien + "',N'" + NvObj.TenNhanVien + "',N'" + NvObj.GioiTinh + "',CONVERT(DATE,'" + NvObj.NamSinh + "', 103),N'" + NvObj.DiaChi + "', '" + NvObj.SoDienThoai + "','"+ NvObj.Email +"', '" + NvObj.MatKhau + "', CONVERT(DATE,'" + NvObj.Day_Begin_Working + "', 103))";
+            sqlcmd.CommandText = "Insert into tb_NhanVienKho values('" + NvObj.MaNhanVien + "',N'" + NvObj.TenNhanVien + "',N'" + NvObj.GioiTinh + "',CONVERT(DATE,'" + NvObj.NamSinh + "', 103),N'" + NvObj.DiaChi + "', '" + NvObj.SoDienThoai + "','"+ NvObj.Email +"', '" + NvObj.MatKhau() + "', CONVERT(DATE,'" + NvObj.Day_Begin_Working + "', 103))";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection; //"sqlcmd.Connection = sqlcon" if there is not constructor Connection of class ConnectToSQL.
             try { 
@@ -58,7 +58,7 @@ namespace QLBanhang.Model
         //Update data in dataabase:
         public bool UpdateData(NhanvienObj NvObj)
         {
-            sqlcmd.CommandText = "Update tb_NhanVien set TenNV = N'" + NvObj.TenNhanVien + "', GioiTinh = N'" + NvObj.GioiTinh + "', Namsinh = CONVERT(DATE, '" + NvObj.NamSinh + "', 103), DiaChi = N'" + NvObj.DiaChi + "', SDT = '" + NvObj.SoDienThoai + "', Email = '"+ NvObj.Email +"', NgayVaoLamViec = CONVERT(DATE, '" + NvObj.Day_Begin_Working + "', 103) Where MaNV = '" + NvObj.MaNhanVien + "'";
+            sqlcmd.CommandText = "Update tb_NhanVienKho set TenNV = N'" + NvObj.TenNhanVien + "', GioiTinh = N'" + NvObj.GioiTinh + "', Namsinh = CONVERT(DATE, '" + NvObj.NamSinh + "', 103), DiaChi = N'" + NvObj.DiaChi + "', SDT = '" + NvObj.SoDienThoai + "', Email = '"+ NvObj.Email +"', NgayVaoLamViec = CONVERT(DATE, '" + NvObj.Day_Begin_Working + "', 103) Where MaNV = '" + NvObj.MaNhanVien + "'";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection; //"sqlcmd.Connection = sqlcon" if there is not constructor Connection of class ConnectToSQL.
             try {
@@ -97,7 +97,7 @@ namespace QLBanhang.Model
         //Update password:
         public bool UpdatePass(NhanvienObj NvObj)
         {
-            sqlcmd.CommandText = "Update tb_NhanVien set MatKhau = '"+NvObj.MatKhau+"' Where MaNV = '"+NvObj.MaNhanVien+"'";
+            sqlcmd.CommandText = "Update tb_NhanVienKho set MatKhau = '"+NvObj.MatKhau+"' Where MaNV = '"+NvObj.MaNhanVien+"'";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection;
             try {
@@ -117,7 +117,7 @@ namespace QLBanhang.Model
         //Delete data:
         public bool DelData(string ID)
         {
-            sqlcmd.CommandText = "Delete tb_NhanVien Where MaNV = '" + ID + "'";
+            sqlcmd.CommandText = "Delete tb_NhanVienKho Where MaNV = '" + ID + "'";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection;
             try

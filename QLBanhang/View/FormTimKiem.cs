@@ -32,7 +32,7 @@ namespace QLBanhang.View
       //  FormTimKiem fmF = new FormTimKiem(FormKhachHang.ActiveForm);
         KhachHangControl KH_ctrl = new KhachHangControl();
         //FormHoaDon fmHD = new FormHoaDon();
-        HoaDonControl HD_Ctrl = new HoaDonControl();
+        HoaDonNhapHangControl HD_Ctrl = new HoaDonNhapHangControl();
         private void FormTimKiem_Load(object sender, EventArgs e)
         {
             cbTimKiem.Text = "Số điện thoại";

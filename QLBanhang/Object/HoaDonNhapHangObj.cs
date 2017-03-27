@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLBanhang.Object
 {
-    class HoaDonObj
+    class HoaDonNhapHangObj
     {
-        string MaHoadon, MaNguoilap, sdtNguoilap, MaKhachhang, sdtKhachhang, NgayLapHoadon;
+        string MaHoadon, MaNguoilap, sdtNguoilap, MaNguoigiaohang, sdtnguoigiaohang, NgayLapHoadon;
 
         public string MaSoHoadon
         {
@@ -34,16 +34,16 @@ namespace QLBanhang.Object
             set { sdtNguoilap = value; }
         }
 
-        public string MaKhachHang
+        public string MaNguoiGiaoHang
         {
-            get { return MaKhachhang; }
-            set { MaKhachhang = value; }
+            get { return MaNguoigiaohang; }
+            set { MaNguoigiaohang = value; }
         }
 
-        public string SdtKhachHang
+        public string SdtNguoiGiaoHang
         {
-            get { return sdtKhachhang; }
-            set { sdtKhachhang = value; }
+            get { return sdtnguoigiaohang; }
+            set { sdtnguoigiaohang = value; }
         }
 
         public string NgayLapHoaDon
@@ -52,15 +52,15 @@ namespace QLBanhang.Object
             set { NgayLapHoadon = value; }
         }
 
-        HoaDonObj() { }
-        HoaDonObj(string MasoHD, string MasoNguoilap, string SdtNguoiLap, string MasoKH, string SdtKH, string NgaylapHD)
+        HoaDonNhapHangObj() { }
+        HoaDonNhapHangObj(string MasoHD, string MasoNguoilap, string SdtNguoiLap, string MasoNGH, string SdtNGH, string NgaylapHD)
         {
             this.MaHoadon = MasoHD;
             //this.MaHanghoa = MasoHH;
             this.MaNguoilap = MasoNguoilap;
             this.sdtNguoilap = SdtNguoiLap;
-            this.MaKhachhang = MasoKH;
-            this.sdtKhachhang = SdtKH;
+            this.MaNguoigiaohang = MasoNGH;
+            this.sdtnguoigiaohang = SdtNGH;
             this.NgayLapHoadon = NgaylapHD;
         }
     }

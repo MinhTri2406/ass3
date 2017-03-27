@@ -9,14 +9,14 @@ using QLBanhang.Object;
 
 namespace QLBanhang.Control
 {
-    class HoaDonControl
+    class HoaDonNhapHangControl
     {
-        HoadonMod HD_Mod = new HoadonMod();
+        HoadonNhapHangMod HD_Mod = new HoadonNhapHangMod();
         public DataTable GetData()
         {
             return HD_Mod.GetData();
         }
-        public bool AddData(HoaDonObj HD_Obj)
+        public bool AddData(HoaDonNhapHangObj HD_Obj)
         {
             return HD_Mod.AddData(HD_Obj);
         }
@@ -26,7 +26,7 @@ namespace QLBanhang.Control
         }
         public DataTable Find_by_SDT_KH(string Sdt)
         {
-            return HD_Mod.Find("select TenKH from tb_KhachHang where SDT like '%" + Sdt + "%' ");
+            return HD_Mod.Find("select TenNGH from tb_NguoiGiaoHang where SDT like '%" + Sdt + "%' ");
         }
         public bool DelData(string MaHD)
         {

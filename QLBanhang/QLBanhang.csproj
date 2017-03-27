@@ -49,16 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\ChiTietControl.cs" />
-    <Compile Include="Control\HoaDonControl.cs" />
+    <Compile Include="Control\HoaDonNhapHangControl.cs" />
     <Compile Include="Control\KhachHangControl.cs" />
-    <Compile Include="Control\NhanVienControl.cs" />
+    <Compile Include="Control\NhanVienKhoControl.cs" />
     <Compile Include="Model\ChiTietMod.cs" />
     <Compile Include="Model\ConnectToSQL.cs" />
-    <Compile Include="Model\HoadonMod.cs" />
+    <Compile Include="Model\HoadonNhapHangMod.cs" />
     <Compile Include="Model\KhacHangMod.cs" />
-    <Compile Include="Model\NhanVienMod.cs" />
+    <Compile Include="Model\NhanVienKhoMod.cs" />
     <Compile Include="Object\ChiTietObj.cs" />
-    <Compile Include="Object\HoaDonObj.cs" />
+    <Compile Include="Object\HoaDonNhapHangObj.cs" />
     <Compile Include="Object\KhachHangObj.cs" />
     <Compile Include="Object\NhanvienObj.cs" />
     <Compile Include="View\FormChiTiet.cs">

@@ -9,14 +9,15 @@ using QLBanhang.Object;
 
 namespace QLBanhang.Model
 {
-    class HoadonMod
+    class HoadonNhapHangMod
     {
         ConnectToSQL sqlcon = new ConnectToSQL();
         SqlCommand sqlcmd = new SqlCommand();
+       
         public DataTable GetData()
         {
             DataTable DT = new DataTable();
-            sqlcmd.CommandText = @"select hd.MaHD, hd.NgayLap, nv.TenNV, nv.SDT SDTNhanVien, kh.TenKH, kh.SDT SDTKhachHang from tb_HoaDon hd, tb_KhachHang kh, tb_NhanVien nv where kh.MaKH = hd.MaKhachHang and nv.MaNV = hd.MaNguoiLap";
+            sqlcmd.CommandText = @"select hd.MaHD, hd.NgayLap, nv.TenNV, nv.SDT SDTNhanVien, ngh.TenNGH TenNguoiGiaoHang, ngh.SDT SDTNguoiGiaoHang, ngh.CongTy  from tb_HoaDonNhap hd, tb_NguoiGiaoHang ngh, tb_NhanVienKho nv where ngh.MaNGH = hd.MaNguoiGiaoHang and nv.MaNV = hd.MaNguoiLap";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection;
             try
@@ -33,9 +34,9 @@ namespace QLBanhang.Model
             }
             return DT;
         }
-        public bool AddData(HoaDonObj HD_Obj)
+        public bool AddData(HoaDonNhapHangObj HD_Obj)
         {
-            sqlcmd.CommandText = "insert into tb_HoaDon values('" + HD_Obj.MaSoHoadon + "', CONVERT(DATE, '" + HD_Obj.NgayLapHoaDon + "', 103), '" + HD_Obj.MaSoNguoilap + "', '" + HD_Obj.SdtNguoiLap + "', '" + HD_Obj.MaKhachHang + "', '" + HD_Obj.SdtKhachHang + "')";
+            sqlcmd.CommandText = "insert into tb_HoaDon values('" + HD_Obj.MaSoHoadon + "', CONVERT(DATE, '" + HD_Obj.NgayLapHoaDon + "', 103), '" + HD_Obj.MaSoNguoilap + "', '" + HD_Obj.SdtNguoiLap + "', '" + HD_Obj.MaNguoiGiaoHang + "', '" + HD_Obj.SdtNguoiGiaoHang + "')";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection;
             try
@@ -77,7 +78,7 @@ namespace QLBanhang.Model
         
         public bool DelData(string MaHoaDon)
         {
-            sqlcmd.CommandText = "Delete tb_HoaDon Where MaHD = '" + MaHoaDon + "'";
+            sqlcmd.CommandText = "Delete tb_HoaDonNhap Where MaHD = '" + MaHoaDon + "'";
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.Connection = sqlcon.Connection;
             try {

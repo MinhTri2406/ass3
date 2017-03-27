@@ -9,9 +9,12 @@ using QLBanhang.Object;
 
 namespace QLBanhang.Control
 {
-    class NhanVienControl
+    class NhanVienKhoControl
     {
-        NhanVienMod NvModel = new NhanVienMod();
+        /// <summary>
+        /// Nhan vien kho control
+        /// </summary>
+        
         public DataTable GetData()
         {
             return NvModel.GetData();
@@ -24,14 +27,28 @@ namespace QLBanhang.Control
         {
             return NvModel.UpdateData(NvObj);
         }
+
+        /// <summary>
+        /// Find nhan vien nhap kho by sdt
+        /// </summary>
+        /// <param name="sdt"></param>
+        /// <returns></returns>
         public DataTable Find_by_Sdt(string sdt)
         {
-            return NvModel.Find("select * from tb_NhanVien where SDT like '%" + sdt + "%'");
+            return NvModel.Find("select * from tb_NhanVienKho where SDT like '%" + sdt + "%'");
         }
+
+        /// <summary>
+        /// Find nhan vien nhap kho by name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public DataTable Find_by_Name(string name)
         {
-            return NvModel.Find("select * from tb_NhanVien where TenNV like N'%" + name + "%'");
+            return NvModel.Find("select * from tb_NhanVienKho where TenNV like N'%" + name + "%'");
         }
+
+        //Update password from user
         public bool UpdatePass(NhanvienObj NvObj)
         {
             return NvModel.UpdatePass(NvObj);

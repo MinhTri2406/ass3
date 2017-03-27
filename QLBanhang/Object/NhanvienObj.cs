@@ -9,7 +9,7 @@ namespace QLBanhang.Object
     class NhanvienObj
     {
         string Ma, Ten, Gioitinh, Sdt, email, Diachi, Matkhau;
-
+        Random ranpass = new Random();
         public string Email
         {
             get { return email; }
@@ -23,10 +23,10 @@ namespace QLBanhang.Object
             set { DayBeginWorking = value; }
         }
         
-        public string MatKhau
+        public string MatKhau()
         {
-            get { return Matkhau; }
-            set { Matkhau = value; }
+            int Pass = ranpass.Next(1000000, 9999999);
+            return this.Matkhau = Pass.ToString();
         }
 
         public string DiaChi

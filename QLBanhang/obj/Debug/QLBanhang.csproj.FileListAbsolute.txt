@@ -12,3 +12,17 @@ D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.exe
 D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.pdb
 D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.csprojResolveAssemblyReference.cache
 D:\Lap trinh\Quản lí hàng hóa\QLBanhang\QLBanhang\obj\Debug\QLBanhang.View.FormFind.resources
+C:\Users\Tri\Desktop\ass3\QLBanhang\bin\Debug\QLBanhang.exe.config
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.exe
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.pdb
+C:\Users\Tri\Desktop\ass3\QLBanhang\bin\Debug\QLBanhang.exe
+C:\Users\Tri\Desktop\ass3\QLBanhang\bin\Debug\QLBanhang.pdb
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.csprojResolveAssemblyReference.cache
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.Properties.Resources.resources
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.View.FormChiTiet.resources
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.View.FormFind.resources
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.View.FormHoaDon.resources
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.View.FormKhachHang.resources
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.View.FormTimKiem.resources
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.csproj.GenerateResource.Cache
+C:\Users\Tri\Desktop\ass3\QLBanhang\obj\Debug\QLBanhang.View.FormNhanVienKho.resources

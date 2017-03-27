@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvDSHoaDon = new System.Windows.Forms.DataGridView();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -59,9 +59,9 @@
             this.cbTimKiem = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSdtKhachHang = new System.Windows.Forms.TextBox();
+            this.txtSdtNguoiGiaoHang = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmbKhachHang = new System.Windows.Forms.ComboBox();
+            this.cmbNguoiGiaoHang = new System.Windows.Forms.ComboBox();
             this.btnTimKiemKH = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,15 +89,15 @@
             this.dtgvDSHoaDon.AllowUserToDeleteRows = false;
             this.dtgvDSHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDSHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvDSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDSHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvDSHoaDon.Location = new System.Drawing.Point(3, 22);
@@ -184,25 +184,25 @@
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // inHóaĐơnToolStripMenuItem
             // 
             this.inHóaĐơnToolStripMenuItem.Name = "inHóaĐơnToolStripMenuItem";
-            this.inHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.inHóaĐơnToolStripMenuItem.Text = "In hóa đơn";
             // 
             // xuấtExcelToolStripMenuItem
             // 
             this.xuấtExcelToolStripMenuItem.Name = "xuấtExcelToolStripMenuItem";
-            this.xuấtExcelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xuấtExcelToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.xuấtExcelToolStripMenuItem.Text = "Xuất file";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // thôngTinCáNhânToolStripMenuItem
@@ -218,13 +218,13 @@
             // xemThôngTinToolStripMenuItem
             // 
             this.xemThôngTinToolStripMenuItem.Name = "xemThôngTinToolStripMenuItem";
-            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.xemThôngTinToolStripMenuItem.Text = "Xem thông tin";
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // btnSuaNgay
@@ -357,9 +357,9 @@
             this.groupBox4.Controls.Add(this.cbTimKiem);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.txtSdtKhachHang);
+            this.groupBox4.Controls.Add(this.txtSdtNguoiGiaoHang);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.cmbKhachHang);
+            this.groupBox4.Controls.Add(this.cmbNguoiGiaoHang);
             this.groupBox4.Controls.Add(this.btnTimKiemKH);
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Maroon;
@@ -377,7 +377,7 @@
             this.cbTimKiem.FormattingEnabled = true;
             this.cbTimKiem.Items.AddRange(new object[] {
             "Số điện thoại",
-            "Tên khách hàng"});
+            "Tên người giao hàng"});
             this.cbTimKiem.Location = new System.Drawing.Point(125, 117);
             this.cbTimKiem.Name = "cbTimKiem";
             this.cbTimKiem.Size = new System.Drawing.Size(218, 30);
@@ -402,20 +402,20 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label8.Location = new System.Drawing.Point(58, 34);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 16);
+            this.label8.Size = new System.Drawing.Size(105, 16);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Khách hàng";
+            this.label8.Text = "Người giao hàng";
             // 
-            // txtSdtKhachHang
+            // txtSdtNguoiGiaoHang
             // 
-            this.txtSdtKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSdtKhachHang.Enabled = false;
-            this.txtSdtKhachHang.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSdtKhachHang.Location = new System.Drawing.Point(166, 68);
-            this.txtSdtKhachHang.MaxLength = 15;
-            this.txtSdtKhachHang.Name = "txtSdtKhachHang";
-            this.txtSdtKhachHang.Size = new System.Drawing.Size(275, 26);
-            this.txtSdtKhachHang.TabIndex = 6;
+            this.txtSdtNguoiGiaoHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSdtNguoiGiaoHang.Enabled = false;
+            this.txtSdtNguoiGiaoHang.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSdtNguoiGiaoHang.Location = new System.Drawing.Point(166, 68);
+            this.txtSdtNguoiGiaoHang.MaxLength = 15;
+            this.txtSdtNguoiGiaoHang.Name = "txtSdtNguoiGiaoHang";
+            this.txtSdtNguoiGiaoHang.Size = new System.Drawing.Size(275, 26);
+            this.txtSdtNguoiGiaoHang.TabIndex = 6;
             // 
             // label9
             // 
@@ -429,20 +429,20 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Số điện thoại\r\n";
             // 
-            // cmbKhachHang
+            // cmbNguoiGiaoHang
             // 
-            this.cmbKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbKhachHang.Enabled = false;
-            this.cmbKhachHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbKhachHang.FormattingEnabled = true;
-            this.cmbKhachHang.Location = new System.Drawing.Point(166, 29);
-            this.cmbKhachHang.Name = "cmbKhachHang";
-            this.cmbKhachHang.Size = new System.Drawing.Size(317, 26);
-            this.cmbKhachHang.TabIndex = 5;
-            this.cmbKhachHang.SelectedIndexChanged += new System.EventHandler(this.cmbKhachHang_SelectedIndexChanged);
-            this.cmbKhachHang.TextChanged += new System.EventHandler(this.cmbKhachHang_TextChanged);
+            this.cmbNguoiGiaoHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbNguoiGiaoHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbNguoiGiaoHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbNguoiGiaoHang.Enabled = false;
+            this.cmbNguoiGiaoHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNguoiGiaoHang.FormattingEnabled = true;
+            this.cmbNguoiGiaoHang.Location = new System.Drawing.Point(166, 29);
+            this.cmbNguoiGiaoHang.Name = "cmbNguoiGiaoHang";
+            this.cmbNguoiGiaoHang.Size = new System.Drawing.Size(317, 26);
+            this.cmbNguoiGiaoHang.TabIndex = 5;
+            this.cmbNguoiGiaoHang.SelectedIndexChanged += new System.EventHandler(this.cmbKhachHang_SelectedIndexChanged);
+            this.cmbNguoiGiaoHang.TextChanged += new System.EventHandler(this.cmbKhachHang_TextChanged);
             // 
             // btnTimKiemKH
             // 
@@ -588,7 +588,7 @@
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(493, 28);
             this.btnChiTiet.TabIndex = 7;
-            this.btnChiTiet.Text = "Chi tiết đơn hàng";
+            this.btnChiTiet.Text = "Nhập chi tiết đơn hàng";
             this.btnChiTiet.UseVisualStyleBackColor = false;
             this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
@@ -632,7 +632,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nhập đơn hàng";
+            this.Text = "Nhập hàng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHoaDon_FormClosing);
             this.Load += new System.EventHandler(this.FormHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSHoaDon)).EndInit();
@@ -679,9 +679,9 @@
         private System.Windows.Forms.DateTimePicker dtNgayLap;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSdtKhachHang;
+        private System.Windows.Forms.TextBox txtSdtNguoiGiaoHang;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbKhachHang;
+        private System.Windows.Forms.ComboBox cmbNguoiGiaoHang;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaNguoiLap;

@@ -62,13 +62,13 @@
             this.MNSThem = new System.Windows.Forms.ToolStripMenuItem();
             this.MNSLuu = new System.Windows.Forms.ToolStripMenuItem();
             this.MNSTim = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNSTimId = new System.Windows.Forms.ToolStripMenuItem();
             this.MNSTimsdt = new System.Windows.Forms.ToolStripMenuItem();
             this.MNSTimten = new System.Windows.Forms.ToolStripMenuItem();
             this.MNSPrint = new System.Windows.Forms.ToolStripMenuItem();
             this.MNSThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbGio = new System.Windows.Forms.Label();
+            this.inThôngTinNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -478,6 +478,7 @@
             this.MNSThem,
             this.MNSLuu,
             this.MNSTim,
+            this.inThôngTinNhânViênToolStripMenuItem,
             this.MNSPrint,
             this.MNSThoat});
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
@@ -487,58 +488,50 @@
             // MNSThem
             // 
             this.MNSThem.Name = "MNSThem";
-            this.MNSThem.Size = new System.Drawing.Size(152, 22);
+            this.MNSThem.Size = new System.Drawing.Size(191, 22);
             this.MNSThem.Text = "Thêm mới";
             this.MNSThem.Click += new System.EventHandler(this.MNSThem_Click);
             // 
             // MNSLuu
             // 
             this.MNSLuu.Name = "MNSLuu";
-            this.MNSLuu.Size = new System.Drawing.Size(152, 22);
+            this.MNSLuu.Size = new System.Drawing.Size(191, 22);
             this.MNSLuu.Text = "Lưu";
             this.MNSLuu.Click += new System.EventHandler(this.MNSLuu_Click);
             // 
             // MNSTim
             // 
             this.MNSTim.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MNSTimId,
             this.MNSTimsdt,
             this.MNSTimten});
             this.MNSTim.Name = "MNSTim";
-            this.MNSTim.Size = new System.Drawing.Size(152, 22);
+            this.MNSTim.Size = new System.Drawing.Size(191, 22);
             this.MNSTim.Text = "Tìm kiếm";
-            // 
-            // MNSTimId
-            // 
-            this.MNSTimId.Name = "MNSTimId";
-            this.MNSTimId.Size = new System.Drawing.Size(197, 22);
-            this.MNSTimId.Text = "Tìm theo mã nhân viên";
-            this.MNSTimId.Click += new System.EventHandler(this.MNSTimId_Click);
             // 
             // MNSTimsdt
             // 
             this.MNSTimsdt.Name = "MNSTimsdt";
-            this.MNSTimsdt.Size = new System.Drawing.Size(197, 22);
+            this.MNSTimsdt.Size = new System.Drawing.Size(193, 22);
             this.MNSTimsdt.Text = "Tìm theo số điện thoại";
             this.MNSTimsdt.Click += new System.EventHandler(this.MNSTimsdt_Click);
             // 
             // MNSTimten
             // 
             this.MNSTimten.Name = "MNSTimten";
-            this.MNSTimten.Size = new System.Drawing.Size(197, 22);
+            this.MNSTimten.Size = new System.Drawing.Size(193, 22);
             this.MNSTimten.Text = "Tìm theo tên";
             this.MNSTimten.Click += new System.EventHandler(this.MNSTimten_Click);
             // 
             // MNSPrint
             // 
             this.MNSPrint.Name = "MNSPrint";
-            this.MNSPrint.Size = new System.Drawing.Size(152, 22);
+            this.MNSPrint.Size = new System.Drawing.Size(191, 22);
             this.MNSPrint.Text = "In danh sách";
             // 
             // MNSThoat
             // 
             this.MNSThoat.Name = "MNSThoat";
-            this.MNSThoat.Size = new System.Drawing.Size(152, 22);
+            this.MNSThoat.Size = new System.Drawing.Size(191, 22);
             this.MNSThoat.Text = "Thoát";
             this.MNSThoat.Click += new System.EventHandler(this.MNSThoat_Click);
             // 
@@ -559,6 +552,12 @@
             this.lbGio.TabIndex = 25;
             this.lbGio.Text = "01-01-2017 00:00:00 AM";
             this.lbGio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // inThôngTinNhânViênToolStripMenuItem
+            // 
+            this.inThôngTinNhânViênToolStripMenuItem.Name = "inThôngTinNhânViênToolStripMenuItem";
+            this.inThôngTinNhânViênToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.inThôngTinNhânViênToolStripMenuItem.Text = "In thông tin nhân viên";
             // 
             // FormNhanVien
             // 
@@ -629,6 +628,6 @@
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ToolStripMenuItem MNSTimId;
+        private System.Windows.Forms.ToolStripMenuItem inThôngTinNhânViênToolStripMenuItem;
     }
 }

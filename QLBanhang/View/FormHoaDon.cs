@@ -44,7 +44,7 @@ namespace QLBanhang.View
         {
             InitializeComponent();
         }
-        HoaDonControl HD_Ctrl = new HoaDonControl();
+        HoaDonNhapHangControl HD_Ctrl = new HoaDonNhapHangControl();
         ChiTietControl CT_Ctrl = new ChiTietControl();
         FormChiTiet FmChiTiet = new FormChiTiet();
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace QLBanhang.View
         }
         private void Display_Enable(bool B)
         {
-            txtMaDonHang.Enabled = cmbKhachHang.Enabled = txtMaNguoiLap.Enabled = txtSdtNguoiLap.Enabled = txtSdtKhachHang.Enabled = B;
+            txtMaDonHang.Enabled = cmbNguoiGiaoHang.Enabled = txtMaNguoiLap.Enabled = txtSdtNguoiLap.Enabled = txtSdtNguoiGiaoHang.Enabled = B;
             btnThem.Enabled = btnSuaHD.Enabled = btnXoa.Enabled = btnChiTiet.Enabled = !B; btnLuu.Enabled = btnHuy.Enabled = B;
             //if (txtMaHoaDon.Text != "")
             //{
@@ -108,11 +108,11 @@ namespace QLBanhang.View
             txtSdtNguoiLap.DataBindings.Clear();
             txtSdtNguoiLap.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "SDTNhanVien");
 
-            cmbKhachHang.DataBindings.Clear();
-            cmbKhachHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "TenKH");
+            cmbNguoiGiaoHang.DataBindings.Clear();
+            cmbNguoiGiaoHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "TenNguoiGiaoHang");
 
-            txtSdtKhachHang.DataBindings.Clear();
-            txtSdtKhachHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "SDTKhachHang");
+            txtSdtNguoiGiaoHang.DataBindings.Clear();
+            txtSdtNguoiGiaoHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "SDTNguoiGiaoHang");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace QLBanhang.View
         }
         private void CleanData_Display()
         {
-            txtMaDonHang.Text  = txtSdtKhachHang.Text = "";
+            txtMaDonHang.Text  = txtSdtNguoiGiaoHang.Text = "";
             //txtMaNguoiLap.Text = txtSdtNguoiLap.Text = txtTenNguoiLap.Text = "";
             dtNgayLap.Text = DateTime.Now.Date.ToShortDateString();
             Load_CMBKhachHang();
@@ -139,11 +139,11 @@ namespace QLBanhang.View
         //*********Them hoa don moi
         private void Load_CMBKhachHang()
         {
-            KhachHangControl KHCtrl = new KhachHangControl();
-            cmbKhachHang.DataSource = KHCtrl.GetData();
-            cmbKhachHang.DisplayMember = "TenKH";
-            cmbKhachHang.ValueMember = "MaKH";
-            cmbKhachHang.SelectedIndex = 0;
+            KhachHangControl NGHCtrl = new KhachHangControl();
+            cmbNguoiGiaoHang.DataSource = NGHCtrl.GetData();
+            cmbNguoiGiaoHang.DisplayMember = "TenNGH";
+            cmbNguoiGiaoHang.ValueMember = "MaNGH";
+            cmbNguoiGiaoHang.SelectedIndex = 0;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -154,7 +154,7 @@ namespace QLBanhang.View
             btnPrint.Enabled = false;
             btnSuaNgay.Enabled = false;
             btnTimKiemKH.Enabled = cbTimKiem.Enabled = true;
-            cmbKhachHang.Enabled = txtSdtKhachHang.Enabled = false;
+            cmbNguoiGiaoHang.Enabled = txtSdtNguoiGiaoHang.Enabled = false;
             ChucNangTimKiem = true;
         }
 
@@ -166,10 +166,11 @@ namespace QLBanhang.View
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có thực sự muốn thoát?", "Thông báo!", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-            {
-                Application.ExitThread();
-            }
+            //if (MessageBox.Show("Bạn có thực sự muốn thoát?", "Thông báo!", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            //{
+            //    Application.ExitThread();
+            //}
+            this.Close();
             
         }
 
@@ -188,10 +189,10 @@ namespace QLBanhang.View
          ..........................................*/ 
         private void Bingding1()
         {
-            cmbKhachHang.DataBindings.Clear();
-            cmbKhachHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "TenKH");
-            txtSdtKhachHang.DataBindings.Clear();
-            txtSdtKhachHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "SDT");
+            cmbNguoiGiaoHang.DataBindings.Clear();
+            cmbNguoiGiaoHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "TenNGH");
+            txtSdtNguoiGiaoHang.DataBindings.Clear();
+            txtSdtNguoiGiaoHang.DataBindings.Add("Text", dtgvDSHoaDon.DataSource, "SDT");
         }
         private void btnTimKiemKH_Click(object sender, EventArgs e)
         {
@@ -199,18 +200,18 @@ namespace QLBanhang.View
             //fmTimKiem.ShowDialog();
             //txtSdtNguoiLap.Text = this.TenKH_after_Find;
             //cmbKhachHang.Text = this.TenKH_after_Find;
-            if (txtSdtKhachHang.Text == "" && cmbKhachHang.Text == "")
+            if (txtSdtNguoiGiaoHang.Text == "" && cmbNguoiGiaoHang.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập từ khóa cần tìm kiếm! Vui lòng nhập lại!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (cbTimKiem.Text == "Số điện thoại")
             {
-                dtgvDSHoaDon.DataSource = HD_Ctrl.Find("select * from tb_KhachHang where SDT like '%" + txtSdtKhachHang.Text.Trim() + "%'");
+                dtgvDSHoaDon.DataSource = HD_Ctrl.Find("select * from tb_NguoiGiaoHang where SDT like '%" + txtSdtNguoiGiaoHang.Text.Trim() + "%'");
                 Bingding1();
             }
             else if (/*QuyenTruyCap == 0 &&*/ cbTimKiem.Text == "Tên khách hàng")
             {
-                dtgvDSHoaDon.DataSource = HD_Ctrl.Find("select * from tb_KhachHang where TenKH like N'%" + cmbKhachHang.Text.Trim() + "%'");
+                dtgvDSHoaDon.DataSource = HD_Ctrl.Find("select * from tb_NguoiGiaoHang where TenNGH like N'%" + cmbNguoiGiaoHang.Text.Trim() + "%'");
                 Bingding1();
             }
             
@@ -220,13 +221,13 @@ namespace QLBanhang.View
         {
             if (cbTimKiem.Text == "Số điện thoại" && ChucNangTimKiem == true)
             {
-                txtSdtKhachHang.Enabled = true;
-                cmbKhachHang.Enabled = false;
+                txtSdtNguoiGiaoHang.Enabled = true;
+                cmbNguoiGiaoHang.Enabled = false;
             }
-            else if (cbTimKiem.Text == "Tên khách hàng" && ChucNangTimKiem == true)
+            else if (cbTimKiem.Text == "Tên người giao hàng" && ChucNangTimKiem == true)
             {
-                txtSdtKhachHang.Enabled = false;
-                cmbKhachHang.Enabled = true;
+                txtSdtNguoiGiaoHang.Enabled = false;
+                cmbNguoiGiaoHang.Enabled = true;
             }
         }
 
